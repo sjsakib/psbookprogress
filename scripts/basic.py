@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import os
-import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'psbookprogress.settings')
+import django
 django.setup()
 
 from progress.models import Chapter, Part, Judge
