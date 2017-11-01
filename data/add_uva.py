@@ -29,12 +29,12 @@ def start():
             print(num, '->', p['pid'], p['title'])
             input('Sure?')
             for problem in data:
-                if p['pid'] in problem:
+                if p['pid'] == problem[0]:
                     print('Already added')
                     print(p)
                     break
             else:
-                data.append([p['pid'], p['title'], ch, part])
+                data.append([str(p['pid']), num, p['title'], ch, part])
                 count += 1
         except KeyboardInterrupt:
             print('Not added...')
