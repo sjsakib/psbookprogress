@@ -4,14 +4,14 @@ from django.contrib.auth.models import User
 
 class Chapter(models.Model):
     name = models.CharField(max_length=100)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
 
     def __str__(self):
         return self.name
 
 
 class Part(models.Model):
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
 
     def __str__(self):
         return self.slug
@@ -19,7 +19,7 @@ class Part(models.Model):
 
 class Judge(models.Model):
     name = models.CharField(max_length=20)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
 
     def __str__(self):
         return self.name
@@ -41,7 +41,23 @@ class Problem(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
 
-    cf_id = models.CharField(max_length=50)
-    loj_id = models.CharField(max_length=50)
-    uva_id = models.CharField(max_length=50)
-    timus_id = models.CharField(max_length=50)
+    cf_id = models.CharField(max_length=50, blank=True)
+    loj_id = models.CharField(max_length=50, blank=True)
+    uva_id = models.CharField(max_length=50, blank=True)
+    timus_id = models.CharField(max_length=50, blank=True)
+
+    solved_list = models.ManyToManyField(Problem)
+
+    last_updated = models.DateTimeField(blank=True, null=True)
+    status = models.CharField(max_length=200, blank=True)
+
+    def __str__(self):
+        return self.user.username
+
+
+class ProblemAlias(models.Model):
+    problem = models.ForeignKey(Problem)
+    pid = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.porblem.pid + ' <-> ' + self.pid

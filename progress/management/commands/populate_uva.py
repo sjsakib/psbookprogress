@@ -1,6 +1,6 @@
 import json
 from django.core.management.base import BaseCommand
-from progress.models import Problem, Part, Judge, Chapter
+from progress.models import Problem, ProblemAlias, Part, Judge, Chapter
 
 
 class Command(BaseCommand):
@@ -21,7 +21,7 @@ class Command(BaseCommand):
 
         self.start()
 
-    def add_problem(self, pid, pnum, name, ch, prt):
+    def add_problem(self, pid, pnum, name, ch, prt, aliases):
         ch = 'ch-' + ch
         chapter = Chapter.objects.get(slug=ch)
         part = Part.objects.get(slug=prt)
@@ -31,5 +31,9 @@ class Command(BaseCommand):
         problem.slug = self.judge.slug + '-' + pnum
 
         problem.save()
-
         self.stdout.write(self.style.SUCCESS('added '+str(problem)))
+
+        for al in aliases:
+            alias, _ = ProblemAlias.objects.get_or_create(problem=problem, pid=al)
+            alias.save()
+            self.stdout.write(self.style.SUCCESS('  -- added alias '+str(alias)))

@@ -34,7 +34,7 @@ def start():
                     print(p)
                     break
             else:
-                data.append([str(p['pid']), num, p['title'], ch, part])
+                data.append([str(p['pid']), num, p['title'], ch, part, []])
                 count += 1
         except KeyboardInterrupt:
             print('Not added...')
@@ -42,7 +42,7 @@ def start():
             print('Invalid num...')
 
     with open('uva.json', 'w') as f:
-        json.dump(data, f)
+        json.dump(data, f, indent=4)
 
 
 if __name__ == '__main__':
