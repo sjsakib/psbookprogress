@@ -4,17 +4,21 @@ from progress.models import Problem, Part, Judge, Chapter
 
 
 class Command(BaseCommand):
-    args = '<foo bar ...>'
-    help = 'our help string comes here'
+    help = 'Populate problems form json files in the data directory'
+
+    def add_arguments(self, parser):
+        parser.add_argument('-j', type=str, help='judge slug')
+        parser.add_argument('-f', type=str, help='filename in the data directory')
 
     def start(self):
-        with open('data/uva.json', 'r') as f:
-            self.data = json.load(f)
-        self.judge = Judge.objects.get(slug='uva')
         for p in self.data:
             self.add_problem(*p)
 
     def handle(self, *args, **options):
+        with open('data/'+options['f'], 'r') as f:
+            self.data = json.load(f)
+        self.judge = Judge.objects.get(slug=options['j'])
+
         self.start()
 
     def add_problem(self, pid, pnum, name, ch, prt):
@@ -24,8 +28,8 @@ class Command(BaseCommand):
 
         problem, _ = Problem.objects.get_or_create(pid=pid, judge=self.judge, chapter=chapter, part=part)
         problem.name = self.judge.name + ' ' + pnum + ' - ' + name
-        problem.slug = 'uva-'+pnum
+        problem.slug = self.judge.slug + '-' + pnum
 
         problem.save()
 
-        print(problem)
+        self.stdout.write(self.style.SUCCESS('added '+str(problem)))
