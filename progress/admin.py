@@ -1,5 +1,5 @@
 from django.contrib import admin
-from progress.models import Part, Chapter, Judge, Problem, UserProfile
+from progress.models import Part, Chapter, Judge, Problem, UserProfile, ProblemAlias
 
 
 @admin.register(Problem)
@@ -14,3 +14,4 @@ admin.site.register(Part)
 admin.site.register(Chapter)
 admin.site.register(Judge)
 admin.site.register(UserProfile)
+admin.site.register(ProblemAlias)

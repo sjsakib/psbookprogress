@@ -1,0 +1,39 @@
+progress {
+    width: 50px;
+}
+input[type=text], input[type=password] {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit], button {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 3px 8px;
+    background: white;
+    border-radius: 3px;
+}
+
+table.input th, table.input td {
+    border-bottom: none;
+}
+
+.right {
+    float: right;
+}
+
+.profile {
+    width: 50%;
+}
+
+p.info {
+    margin-top: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+ul.menu {
+    list-style: none;
+    padding: 0px;
+}

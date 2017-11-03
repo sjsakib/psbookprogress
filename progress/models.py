@@ -60,4 +60,4 @@ class ProblemAlias(models.Model):
     pid = models.CharField(max_length=15)
 
     def __str__(self):
-        return self.porblem.pid + ' <-> ' + self.pid
+        return self.problem.pid + ' <-> ' + self.pid

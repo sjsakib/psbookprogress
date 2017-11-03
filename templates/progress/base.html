@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/test.css">
+  <meta name="viewport" content="width=device-width">
+  <title>{% block title_block %} psbook progress {% endblock title_block %}</title>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      {% block header_block %}
+        
+      {% endblock header_block %}
+    </header>
+    <section>
+      {% block section_block %}
+        
+      {% endblock section_block %}
+    </section>
+    <footer>
+      <p><small>Developed by <a href="https://github.com/sjsakib">sjsakib</a></small></p>
+    </footer>
+  </div>
+  <script src="/static/js/scale.fix.js"></script>
+</body>
+
+</html>
