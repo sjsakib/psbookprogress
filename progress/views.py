@@ -19,18 +19,30 @@ def profile(request, username):
 
     ch_list = []
 
-    for i, chapter in enumerate(chapters):
+    all_chapters = {'chapter': Chapter(name='All Chapters', slug=''), 'parts': []}
+    for i in range(6):
+        all_chapters['parts'].append({'all': 0, 'solved': 0})
+    all_chapters['parts'][-1]['all'] = book_all.count()
+
+    for chapter in chapters:
         chapter_all = book_all.filter(chapter=chapter)
         ch = {'chapter': chapter, 'parts': []}
         ch_total = {'all': chapter_all.count(), 'solved': 0}
-        for part in all_parts:
+
+        for i, part in enumerate(all_parts):
             part_all = chapter_all.filter(part=part)
             part_solved = part_all.filter(userprofile=profile).count()
             ch['parts'].append({'part': part.slug, 'all': part_all.count(), 'solved': part_solved})
 
             ch_total['solved'] += part_solved
+
+            all_chapters['parts'][i]['all'] += part_all.count()
+            all_chapters['parts'][i]['solved'] += part_solved
+            all_chapters['parts'][-1]['solved'] += part_solved
+
         ch['parts'].append(ch_total)
         ch_list.append(ch)
+    ch_list.append(all_chapters)
 
     return render(request, 'progress/profile.html', context={'profile': profile, 'chapters': ch_list})
 
