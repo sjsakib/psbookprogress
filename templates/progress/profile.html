@@ -7,34 +7,38 @@
 
 {% block section_block %}
   <h1> Progress of {{profile.user.username}}</h1>
-  <p>Last updated {{profile.last_updated}} <br> <a href="">Request Update</a></p>
-      <table>
-        <thead>
-          <tr>
-            <th>Chapter Name</th>
-            <th>Main</th>
-            <th>Simple</th>
-            <th>Easy</th>
-            <th>Medium</th>
-            <th>Hard</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for chapter in chapters %}
-            <tr>
-              <td>{{chapter.chapter.name}}</td>
-              {% for part in chapter.parts %}
-                <td>
-                  {% if part.all %}
-                    <a href="" title="{{part.solved}} out of {{part.all}}">
-                      <progress value="{{part.solved}}" max="{{part.all}}"></progress>
-                    </a>
-                  {% endif %}
-                </td>
-              {% endfor %}
-            </tr>
+  <p>
+    Last updated {{profile.last_updated}}
+    {{profile.status}}<br>
+    <a href="">Request Update</a>
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Chapter Name</th>
+        <th>Main</th>
+        <th>Simple</th>
+        <th>Easy</th>
+        <th>Medium</th>
+        <th>Hard</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for chapter in chapters %}
+        <tr>
+          <td>{{chapter.chapter.name}}</td>
+          {% for part in chapter.parts %}
+            <td>
+              {% if part.all %}
+                <a href="" title="{{part.solved}} out of {{part.all}}">
+                  <progress value="{{part.solved}}" max="{{part.all}}"></progress>
+                </a>
+              {% endif %}
+            </td>
           {% endfor %}
-        </tbody>
-      </table>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock section_block %}

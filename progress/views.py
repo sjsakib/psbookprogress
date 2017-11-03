@@ -46,19 +46,26 @@ def update(request):
             except UserProfile.DoesNotExist:
                 continue
 
-            if item['failed']:
-                failed_judges = Judge.objects.filter(slug__in=item['failed'])
-                profile.status = 'Last update failed for '+', '.join(map(str, failed_judges))
-                profile.save()
-            profile.last_updated = timezone.now()
+            count = 0
             for judge, plist in item['judges'].items():
                 for pid in plist:
                     print(judge, profile, pid)
                     try:
                         problem = Problem.objects.get(Q(pid=pid) | Q(problemalias__pid=pid), judge__slug=judge)
-                        profile.solved_list.add(problem)
+                        if not profile.solved_list.filter(pk=problem.pk).exists():
+                            profile.solved_list.add(problem)
+                            count += 1
                     except Problem.DoesNotExist:
                         pass
+            profile.status = ''
+            if count:
+                profile.last_updated = timezone.now()
+                profile.status = "{} new problem(s) were updated with last request.".format(count)
+            else:
+                profile.status = 'Nothing updated with last request.'
+            if item['failed']:
+                failed_judges = Judge.objects.filter(slug__in=item['failed'])
+                profile.status += ' Last update failed for '+', '.join(map(str, failed_judges)) + '. Might be down.'
             profile.save()
 
     return HttpResponse(status=200)
