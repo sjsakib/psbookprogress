@@ -34,6 +34,19 @@ class Problem(models.Model):
     chapter = models.ForeignKey(Chapter)
     part = models.ForeignKey(Part)
 
+    def solved_by(self):
+        return self.userprofile_set.count()
+
+    def get_link(self):
+        if self.judge.slug == 'uva':
+            return "https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem="+self.pid
+        elif self.judge.slug == 'loj':
+            return ''
+        elif self.judge.slug == 'cf':
+            return ''
+        elif self.judge.slug == 'timus':
+            return "http://acm.timus.ru/problem.aspx?num="+self.pid
+
     def __str__(self):
         return self.name
 

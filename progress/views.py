@@ -19,15 +19,15 @@ def profile(request, username):
 
     ch_list = []
 
-    all_chapters = {'chapter': Chapter(name='All Chapters', slug=''), 'parts': []}
-    for i in range(6):
-        all_chapters['parts'].append({'all': 0, 'solved': 0})
-    all_chapters['parts'][-1]['all'] = book_all.count()
+    all_chapters = {'chapter': Chapter(name='All Chapters', slug='ch-all'), 'parts': []}
+    for part in all_parts:
+        all_chapters['parts'].append({'part': part.slug, 'all': 0, 'solved': 0})
+    all_chapters['parts'].append({'part': 'all', 'all': book_all.count(), 'solved': 0})
 
     for chapter in chapters:
         chapter_all = book_all.filter(chapter=chapter)
         ch = {'chapter': chapter, 'parts': []}
-        ch_total = {'all': chapter_all.count(), 'solved': 0}
+        ch_total = {'part': 'all', 'all': chapter_all.count(), 'solved': 0}
 
         for i, part in enumerate(all_parts):
             part_all = chapter_all.filter(part=part)
@@ -45,6 +45,32 @@ def profile(request, username):
     ch_list.append(all_chapters)
 
     return render(request, 'progress/profile.html', context={'profile': profile, 'chapters': ch_list})
+
+
+def show_problems(request, chapter_slug, part, username=''):
+    q = Q()
+    if chapter_slug != 'ch-all':
+        chapter = Chapter.objects.filter(slug=chapter_slug).first()
+        if chapter:
+            q &= Q(chapter__pk=chapter.pk)
+    else:
+        chapter = Chapter(name='All chapters')
+
+    if part != 'all':
+        q &= Q(part__slug=part)
+
+    problems = Problem.objects.filter(q)
+
+    for p in problems:
+        if p.userprofile_set.filter(user__username=username).exists():
+            p.solved = True
+        else:
+            p.solved = False
+
+    context_dict = {'problems': problems}
+    context_dict['chapter'] = chapter
+    context_dict['part'] = part
+    return render(request, 'progress/show_problems.html', context=context_dict)
 
 
 @csrf_exempt

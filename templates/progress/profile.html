@@ -5,6 +5,10 @@
   Profile of {{profile.user.username}}
 {% endblock title_block %}
 
+{% block header_block %}
+  
+{% endblock header_block %}
+
 {% block section_block %}
   <h1> Progress of {{profile.user.username}}</h1>
   <p>
@@ -31,7 +35,7 @@
           {% for part in chapter.parts %}
             <td>
               {% if part.all %}
-                <a href="" title="{{part.solved}} out of {{part.all}}">
+                <a href="{% url 'show_problems' chapter.chapter.slug part.part profile.user.username %}" title="{{part.solved}} out of {{part.all}}">
                   <progress value="{{part.solved}}" max="{{part.all}}"></progress>
                 </a>
               {% endif %}

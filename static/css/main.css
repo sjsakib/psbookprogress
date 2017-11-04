@@ -37,3 +37,31 @@ ul.menu {
     list-style: none;
     padding: 0px;
 }
+
+.bool {
+    color: white;
+    padding: 0 1em;
+    display: block;
+    text-align: center;
+}
+
+.yes {
+    background: #49b049;
+}
+
+.no {
+    background: #be5147;
+}
+
+a.block {
+    display: block;
+    padding: 0 0px;
+    background: #bdddef;
+    text-align: center;
+}
+
+td > a:hover, td > a:focus {
+    font-weight: normal;
+    color: white;
+    background: #267CB9;
+}

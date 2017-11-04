@@ -1,0 +1,40 @@
+{% extends "progress/base.html" %}
+
+{% block title_block %}
+  {% if chpter.slug %} Chapter - {{ chapter.slug | slice:"3:" | upper }} | {% endif %}
+  {{chapter.name}} | {{part | capfirst }}
+{% endblock title_block %}
+
+
+{% block section_block %}
+  <h1> {{chapter.name}} </h1>
+  <h2> {{part | capfirst }} </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Solved</th>
+        <th>Solved By</th>
+        <th>Tips</th>
+        <th>Search</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for problem in problems %}
+        <tr>
+          <td><a href="{{problem.get_link}}">{{problem.name}}</a></td>
+          <td>
+            {% if problem.solved %}
+              <span class="bool yes">Yes</span>
+            {% else %}
+              <span class="bool no">No</span>
+            {% endif %}
+          </td>
+          <td><a href="" class="block">{{problem.solved_by}}</a></td>
+          <td><a href="">Tips</a></td>
+          <td class="fixed"><a href="https://github.com/shanto86/problem-book-1-solutions/search?utf8=%E2%9C%93&q={{problem.name|add:' in:file,path'|urlencode}}&type=">GitHub</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock section_block %}
