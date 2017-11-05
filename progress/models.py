@@ -64,6 +64,12 @@ class UserProfile(models.Model):
     last_updated = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=200, blank=True)
 
+    def get_name(self):
+        if self.user.first_name or self.user.last_name:
+            return self.user.first_name + ' ' + self.user.last_name
+        else:
+            return self.user.username
+
     def __str__(self):
         return self.user.username
 

@@ -1,17 +1,18 @@
 from django.shortcuts import render
 from django.db.models import Q
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404, HttpResponseNotFound
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from progress.models import Problem, Chapter, Part, Judge, UserProfile
 import json
+from math import ceil
 
 
 def profile(request, username):
     try:
         profile = UserProfile.objects.get(user__username=username)
     except UserProfile.DoesNotExist:
-        pass
+        raise Http404('User Not Found')
 
     chapters = Chapter.objects.all()
     all_parts = Part.objects.all()
@@ -71,6 +72,33 @@ def show_problems(request, chapter_slug, part, username=''):
     context_dict['chapter'] = chapter
     context_dict['part'] = part
     return render(request, 'progress/show_problems.html', context=context_dict)
+
+
+def solved_by(request, problem_slug, page):
+    page = int(page)
+    per_page = 100
+    try:
+        p = Problem.objects.get(slug=problem_slug)
+        solvers = p.userprofile_set.all()
+        pages = int(ceil(len(solvers) / per_page))
+        if page > pages:
+            page = pages
+        if page != 0:
+            solvers = solvers[(page-1) * per_page: page*per_page]
+    except Problem.DoesNotExist:
+        p = None
+        solvers = None
+        pages = 0
+    return render(request, 'progress/solved_by.html', context={'problem': p,
+                                                               'solvers': solvers,
+                                                               'pages': range(pages),
+                                                               'page': page})
+
+
+def ranklist(request, page=1):
+    all_users = UserProfile.objects.all()
+
+    return render(request, 'progress/ranklist.html', {'users': all_users})
 
 
 @csrf_exempt

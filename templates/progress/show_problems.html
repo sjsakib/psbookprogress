@@ -30,7 +30,7 @@
               <span class="bool no">No</span>
             {% endif %}
           </td>
-          <td><a href="" class="block">{{problem.solved_by}}</a></td>
+          <td><a href="{% url 'solved_by' problem.slug 1 %}" class="block">{{problem.solved_by}}</a></td>
           <td><a href="">Tips</a></td>
           <td class="fixed"><a href="https://github.com/shanto86/problem-book-1-solutions/search?utf8=%E2%9C%93&q={{problem.name|add:' in:file,path'|urlencode}}&type=">GitHub</a></td>
         </tr>

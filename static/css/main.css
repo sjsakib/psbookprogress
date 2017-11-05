@@ -65,3 +65,7 @@ td > a:hover, td > a:focus {
     color: white;
     background: #267CB9;
 }
+
+th.rank {
+    width: 30px;
+}

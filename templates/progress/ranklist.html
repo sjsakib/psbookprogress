@@ -1,0 +1,27 @@
+{% extends "progress/base.html" %}
+
+{% block title_block %}
+  Ranklist
+{% endblock title_block %}
+
+{% block section_block %}
+  <h1> Ranklist </h1>
+  <table>
+    <thead>
+      <tr>
+        <th class='rank'>#</th>
+        <th>Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>10</td>
+          <td><a href="{% url 'profile' user.user.username %}">{{user.get_name}}</a></td>
+          <td>100</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock section_block %}

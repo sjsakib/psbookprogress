@@ -1,0 +1,36 @@
+{% extends "progress/base.html" %}
+
+{% block title_block %}
+  {% if problem %}
+    Who've solved {{problem.name}}?
+  {% else %}
+    No such problem
+  {% endif %}
+{% endblock title_block %}
+
+{% block section_block %}
+  {% if problem %}
+    <h1>Who've solved {{problem.name}}?</h1>
+    {% if solvers %}
+      <ol>
+        {% for solver in solvers %}
+          <li><a href="{% url 'profile' solver.user.username %}"> {{solver.get_name}}</a></li>
+        {% endfor %}
+      </ol>
+      {% if pages|length > 1 %}
+        Pages
+        {% for p in pages %}
+          {% if forloop.counter != page %}
+            <a href="{% url 'solved_by' problem.slug forloop.counter %}">{{forloop.counter}}</a>
+          {% else %}
+            {{forloop.counter}}  
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% else %}
+      <h2> No one </h2>
+    {% endif %}
+  {% else %}
+    <h1> No such problem in book </h1>
+  {% endif %}
+{% endblock section_block %}
