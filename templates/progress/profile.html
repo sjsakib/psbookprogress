@@ -6,7 +6,16 @@
 {% endblock title_block %}
 
 {% block header_block %}
-  
+  <img src="{{profile.picture.url}}" class="profile">
+      <p class="info">
+      {{profile.get_name}} </br>
+      {{profile.institute}} </br>
+      {{profile.location}} <br/>
+      <br/>
+      Points: {{profile.points}}<br/>
+      Progress: {{profile.get_progress}} %<br/>
+      Rank: {{profile.get_rank}} <br/>
+      </p>
 {% endblock header_block %}
 
 {% block section_block %}

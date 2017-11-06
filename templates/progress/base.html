@@ -17,12 +17,19 @@
 <body>
   <div class="wrapper">
     <header>
-      <ul class="menu">
-        <li> <a href="/">Home</a> </li>
-      </ul>
       {% block header_block %}
         
       {% endblock header_block %}
+      <ul class="menu">
+        <li> <a href="{% url 'index' %}">Home</a></li>
+        <li> <a href="{% url 'ranklist' 1 %}">Ranklist</a> </li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'profile' user.username %}">My Progress</a></li>
+          <li><a href="">Login</a></li>
+          <li><a href="">Register</a></li>
+          <li><a href="">Login or Register with Facebook</a></li>
+        {% endif %}
+      </ul>
     </header>
     <section>
       {% block section_block %}

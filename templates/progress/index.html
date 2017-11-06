@@ -1,11 +1,13 @@
 {% extends "progress/base.html" %}
 
 {% block title_block %}
-  Ranklist
+  Home
 {% endblock title_block %}
 
 {% block section_block %}
-  <h1> Ranklist </h1>
+  <h1>Welcome To PSBook Progress </h1>
+  <p> Here you can track your progress solving the book  <a href="">`সমস্যা ও সমাধান বই - ১`</a> You can also see who else is solving the problems. Sign up with facebook to get started today</p>
+  <h2>Top 20</h2>
   <table>
     <thead>
       <tr>
@@ -17,7 +19,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for usr in users %}
+      {% for usr in top_users %}
         <tr class="{% if user.pk == usr.user.pk %}highlight{%endif%}">
           <td>{{forloop.counter}}</td>
           <td><a href="{% url 'profile' usr.user.username %}">{{usr.get_name}}</a></td>
@@ -26,25 +28,6 @@
           <td>{{usr.last_updated}}</td>
         </tr>
       {% endfor %}
-      {% if user_bottom %}
-        <tr class="highlight">
-          <td>{{user_rank}}</td>
-          <td><a href="{% url 'profile' user.username %}">{{user.userprofile.get_name}}</a></td>
-          <td>{{user.userprofile.points}}</td>
-          <td>{{user.userprofile.get_progress}} %</td>
-          <td>{{user.userprofile.last_updated}}</td>
-        </tr>
-      {% endif %}
     </tbody>
   </table>
-  {% if pages|length > 1 %}
-    Pages
-    {% for p in pages %}
-      {% if forloop.counter != page %}
-        <a href="{% url 'ranklist' forloop.counter %}">{{forloop.counter}}</a>
-      {% else %}
-        {{forloop.counter}}  
-      {% endif %}
-    {% endfor %}
-  {% endif %}
 {% endblock section_block %}

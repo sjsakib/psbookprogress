@@ -12,6 +12,7 @@ class Chapter(models.Model):
 
 class Part(models.Model):
     slug = models.SlugField(unique=True)
+    points = models.IntegerField()
 
     def __str__(self):
         return self.slug
@@ -63,12 +64,28 @@ class UserProfile(models.Model):
 
     last_updated = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=200, blank=True)
+    points = models.IntegerField()
+
+    location = models.CharField(max_length=100, blank=True)
+    institute = models.CharField(max_length=100, blank=True)
+
+    picture = models.ImageField(upload_to='profile_pictures', blank=True)
 
     def get_name(self):
         if self.user.first_name or self.user.last_name:
             return self.user.first_name + ' ' + self.user.last_name
         else:
             return self.user.username
+
+    def get_progress(self):
+        return round((self.points/Variable.get('total_points'))*100, 2)
+
+    def get_rank(self):
+        all_users = UserProfile.objects.order_by('points', 'last_updated')
+        for i, u in enumerate(all_users):
+            if u.pk == self.pk:
+                return i+1
+        return -1
 
     def __str__(self):
         return self.user.username
@@ -79,4 +96,33 @@ class ProblemAlias(models.Model):
     pid = models.CharField(max_length=15)
 
     def __str__(self):
-        return self.problem.pid + ' <-> ' + self.pid
+        return self.problem.pid + ': ' + self.pid
+
+
+class Variable(models.Model):
+    name = models.CharField(max_length=100)
+    dtype = models.CharField(max_length=10)
+    value = models.CharField(max_length=200)
+
+    def get_val(self):
+        if self.dtype == 'str':
+            return self.value
+        elif self.dtype == 'int':
+            return int(self.value)
+        elif self.dtype == 'bool':
+            return bool(self.value)
+
+    @staticmethod
+    def get(name):
+        v = Variable.objects.get(name=name)
+        return v.get_val()
+
+    @staticmethod
+    def set(name, value, dtype):
+        v, _ = Variable.objects.get_or_create(name=name)
+        v.value = str(value)
+        v.dtype = dtype
+        v.save()
+
+    def __str__(self):
+        return self.name + ': ' + self.value

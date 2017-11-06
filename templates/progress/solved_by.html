@@ -14,7 +14,9 @@
     {% if solvers %}
       <ol>
         {% for solver in solvers %}
-          <li><a href="{% url 'profile' solver.user.username %}"> {{solver.get_name}}</a></li>
+          <li class="{%if user.pk == solver.user.pk %} highlight {%endif%}">
+            <a href="{% url 'profile' solver.user.username %}"> {{solver.get_name}}</a>
+          </li>
         {% endfor %}
       </ol>
       {% if pages|length > 1 %}

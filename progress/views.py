@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.db.models import Q
-from django.http import HttpResponse, Http404, HttpResponseNotFound
+from django.http import HttpResponse, Http404
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from progress.models import Problem, Chapter, Part, Judge, UserProfile
 import json
 from math import ceil
+
+
+def index(request):
+    top_users = UserProfile.objects.all().order_by('points', 'last_updated')[:30]
+    return render(request, 'progress/index.html', context={'top_users': top_users})
 
 
 def profile(request, username):
@@ -74,7 +79,7 @@ def show_problems(request, chapter_slug, part, username=''):
     return render(request, 'progress/show_problems.html', context=context_dict)
 
 
-def solved_by(request, problem_slug, page):
+def solved_by(request, problem_slug, page=1):
     page = int(page)
     per_page = 100
     try:
@@ -96,9 +101,26 @@ def solved_by(request, problem_slug, page):
 
 
 def ranklist(request, page=1):
-    all_users = UserProfile.objects.all()
+    print(request.user.userprofile)
+    page = int(page)
+    per_page = 50
+    all_users = UserProfile.objects.all().order_by('points', 'last_updated')
+    user_rank = 1
+    for i, usr in enumerate(all_users):
+        if request.user.pk == usr.user.pk:
+            user_rank == i+1
+            break
 
-    return render(request, 'progress/ranklist.html', {'users': all_users})
+    pages = int(ceil(all_users.count() / per_page))
+    if page > pages:
+            page = pages
+    if page != 0:
+        all_users = all_users[(page-1) * per_page: page*per_page]
+    return render(request, 'progress/ranklist.html', {'users': all_users,
+                                                      'pages': range(pages),
+                                                      'page': page,
+                                                      'user_rank': user_rank,
+                                                      'user_bottom': page*per_page < user_rank})
 
 
 @csrf_exempt
@@ -137,5 +159,5 @@ def update(request):
     return HttpResponse(status=200)
 
 
-def test(request):
-    return render(request, 'progress/test.html')
+def about(request):
+    return render(request, 'progress/about.html')

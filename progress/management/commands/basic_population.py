@@ -5,7 +5,13 @@ from progress.models import Part, Judge, Chapter
 class Command(BaseCommand):
     help = 'Adds chapters, parts and judges'
 
-    parts = ('main', 'simple', 'easy', 'medium', 'hard')
+    parts = (
+        ('main', 10),
+        ('simple', 5),
+        ('easy', 8),
+        ('medium', 10),
+        ('hard', 15),
+    )
 
     judges = (
         ('LightOJ', 'loj'),
@@ -29,15 +35,16 @@ class Command(BaseCommand):
 
     def populate(self):
         for p in self.parts:
-            self.add_part(p)
+            self.add_part(*p)
         for j in self.judges:
             self.add_judge(*j)
         for ch in self.chapters:
             self.add_chapter(*ch)
 
-    def add_part(self, p):
+    def add_part(self, p, points):
         part, _ = Part.objects.get_or_create(slug=p)
         part.slug = p
+        part.points = points
         part.save()
         self.stdout.write(self.style.SUCCESS('added part '+str(part)))
 

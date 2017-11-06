@@ -69,3 +69,8 @@ td > a:hover, td > a:focus {
 th.rank {
     width: 30px;
 }
+
+img.profile {
+    width: 100px;
+    height: 100px;
+}
