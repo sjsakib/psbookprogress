@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
 
 
 class Chapter(models.Model):
@@ -55,16 +56,16 @@ class Problem(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
 
-    cf_id = models.CharField(max_length=50, blank=True)
-    loj_id = models.CharField(max_length=50, blank=True)
-    uva_id = models.CharField(max_length=50, blank=True)
-    timus_id = models.CharField(max_length=50, blank=True)
+    cf_id = models.CharField(max_length=50, blank=True, verbose_name='CF ID')
+    loj_id = models.CharField(max_length=50, blank=True, verbose_name='LightOJ ID')
+    uva_id = models.CharField(max_length=50, blank=True, verbose_name='UVa ID')
+    timus_id = models.CharField(max_length=50, blank=True, verbose_name='Timus ID')
 
     solved_list = models.ManyToManyField(Problem)
 
     last_updated = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=200, blank=True)
-    points = models.IntegerField()
+    points = models.IntegerField(default=0)
 
     location = models.CharField(max_length=100, blank=True)
     institute = models.CharField(max_length=100, blank=True)
@@ -78,7 +79,7 @@ class UserProfile(models.Model):
             return self.user.username
 
     def get_progress(self):
-        return round((self.points/Variable.get('total_points'))*100, 2)
+        return int((self.points/Variable.get('total_points'))*100)
 
     def get_rank(self):
         all_users = UserProfile.objects.order_by('points', 'last_updated')
@@ -126,3 +127,11 @@ class Variable(models.Model):
 
     def __str__(self):
         return self.name + ': ' + self.value
+
+
+def save_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)
+
+
+post_save.connect(save_profile, sender=User)

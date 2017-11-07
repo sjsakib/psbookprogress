@@ -1,0 +1,9 @@
+{% extends "progress/base.html" %}
+
+{% block title_block %}
+  Registration Complete
+{% endblock title_block %}
+
+{% block section_block %}
+  <p> Registration complete. Now <a href="{% url 'update_info' %}">update your info </a> to start tracking your progress. Make sure to provide all the <a href="{% url 'help' %}">IDs</a> so that we can fetch all your solved problems</p>
+{% endblock section_block %}

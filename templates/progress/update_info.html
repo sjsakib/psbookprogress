@@ -1,0 +1,16 @@
+{% extends "progress/base.html" %}
+
+{% block title_block %}
+  Update Your Info
+{% endblock title_block %}
+
+{% block section_block %}
+  <h1> Update your info</h1>
+  <p> <a href="">See how to find the ids</a></p>
+  <form method="post" action="{% url 'update_info' %}">
+    {% csrf_token %}
+    {{user_form.as_p}}
+    {{profile_form.as_p}}
+    <input type="submit" name="submit" value="Update">
+  </form>
+{% endblock section_block %}

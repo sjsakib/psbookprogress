@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'progress',
+    'registration',
     'django_extensions',
 ]
 
@@ -117,7 +118,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+# login
+LOGIN_REDIRECT_URL = '/profile/'
 
+# media 
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'

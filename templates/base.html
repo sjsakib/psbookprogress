@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/static/css/main.css">
   <link rel="stylesheet" type="text/css" href="/static/css/test.css">
   <meta name="viewport" content="width=device-width">
-  <title>{% block title_block %} psbook progress {% endblock title_block %}</title>
+  <title>{% block title_block %} psbook progress | {% block title %} {% endblock title %}{% endblock title_block %}</title>
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -23,9 +23,9 @@
       <ul class="menu">
         <li> <a href="{% url 'index' %}">Home</a></li>
         {% if user.is_authenticated %}
+          <li><a href="{% url 'auth_logout' %}">Logout</a>
           <li><a href="{% url 'profile' user.username %}">My Progress</a></li>
-          <li><a href="{% url 'update_info' %}">Update Info</a></li>
-          <li><a href="{% url 'auth_logout' %}">Logout ({{user.username}})</a>
+          <li><a href="">Update Info</a></li>
         {% else %}
           <li><a href="{% url 'auth_login' %}">Login</a></li>
           <li><a href="{% url 'registration_register' %}">Register</a></li>
@@ -35,6 +35,9 @@
     </header>
     <section>
       {% block section_block %}
+        {% block content %}
+          
+        {% endblock content %}
         
       {% endblock section_block %}
     </section>

@@ -60,11 +60,11 @@ a.block {
     text-align: center;
 }
 
-td > a:hover, td > a:focus {
+/*td > a:hover, td > a:focus {
     font-weight: normal;
     color: white;
     background: #267CB9;
-}
+}*/
 
 th.rank {
     width: 30px;

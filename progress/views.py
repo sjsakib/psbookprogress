@@ -1,19 +1,28 @@
 from django.shortcuts import render
 from django.db.models import Q
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from progress.models import Problem, Chapter, Part, Judge, UserProfile
+from progress.forms import UserForm, UserProfileForm
 import json
 from math import ceil
 
 
 def index(request):
-    top_users = UserProfile.objects.all().order_by('points', 'last_updated')[:30]
-    return render(request, 'progress/index.html', context={'top_users': top_users})
+    top_users = UserProfile.objects.all().order_by('points', 'last_updated')[:20]
+    recently_active = UserProfile.objects.all().order_by('-last_updated')[:20]
+    return render(request, 'progress/index.html', context={'top_users': top_users,
+                                                           'recently_active': recently_active})
 
 
-def profile(request, username):
+def profile(request, username=None):
+    if username is None and request.user.is_authenticated():
+        username = request.user.username
+    elif username is None:
+        return HttpResponseRedirect(reverse('auth_login') + '?next=' + reverse('my_profile'))
+
     try:
         profile = UserProfile.objects.get(user__username=username)
     except UserProfile.DoesNotExist:
@@ -51,6 +60,23 @@ def profile(request, username):
     ch_list.append(all_chapters)
 
     return render(request, 'progress/profile.html', context={'profile': profile, 'chapters': ch_list})
+
+
+def update_info(request):
+
+    if request.method == 'POST':
+        user_form = UserForm(request.POST, instance=request.user)
+        profile_form = UserProfileForm(request.POST, instance=request.user.userprofile)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            return HttpResponseRedirect(reverse('profile', args=[request.user.username]))
+    else:
+        user_form = UserForm(instance=request.user)
+        profile_form = UserProfileForm(instance=request.user.userprofile)
+
+    return render(request, 'progress/update_info.html', context={'user_form': user_form,
+                                                                 'profile_form': profile_form})
 
 
 def show_problems(request, chapter_slug, part, username=''):
@@ -159,5 +185,5 @@ def update(request):
     return HttpResponse(status=200)
 
 
-def about(request):
-    return render(request, 'progress/about.html')
+def help(request):
+    return render(request, 'progress/help.html')
