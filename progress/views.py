@@ -11,7 +11,7 @@ from math import ceil
 
 
 def index(request):
-    top_users = UserProfile.objects.all().order_by('points', 'last_updated')[:20]
+    top_users = UserProfile.objects.all().order_by('-points', 'last_updated')[:20]
     recently_active = UserProfile.objects.all().order_by('-last_updated')[:20]
     return render(request, 'progress/index.html', context={'top_users': top_users,
                                                            'recently_active': recently_active})
@@ -130,7 +130,7 @@ def ranklist(request, page=1):
     print(request.user.userprofile)
     page = int(page)
     per_page = 50
-    all_users = UserProfile.objects.all().order_by('points', 'last_updated')
+    all_users = UserProfile.objects.all().order_by('-points', 'last_updated')
     user_rank = 1
     for i, usr in enumerate(all_users):
         if request.user.pk == usr.user.pk:
