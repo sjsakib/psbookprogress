@@ -127,7 +127,6 @@ def solved_by(request, problem_slug, page=1):
 
 
 def ranklist(request, page=1):
-    print(request.user.userprofile)
     page = int(page)
     per_page = 50
     all_users = UserProfile.objects.all().order_by('-points', 'last_updated')
