@@ -82,7 +82,7 @@ class UserProfile(models.Model):
         return int((self.points/Variable.get('total_points'))*100)
 
     def get_rank(self):
-        all_users = UserProfile.objects.order_by('points', 'last_updated')
+        all_users = UserProfile.objects.order_by('-points', 'last_updated')
         for i, u in enumerate(all_users):
             if u.pk == self.pk:
                 return i+1
