@@ -9,6 +9,7 @@
 {% block section_block %}
   <h1> {{chapter.name}} </h1>
   <h2> {{part | capfirst }} </h2>
+  {% if name %} <h3> {{name}}'s progress </h3> {% endif %}
   <table>
     <thead>
       <tr>

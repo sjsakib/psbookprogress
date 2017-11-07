@@ -98,10 +98,16 @@ def show_problems(request, chapter_slug, part, username=''):
             p.solved = True
         else:
             p.solved = False
+    if username:
+        try:
+            name = UserProfile.objects.get(user__username=username).get_name()
+        except UserProfile.DoesNotExist:
+            name = ''
 
     context_dict = {'problems': problems}
     context_dict['chapter'] = chapter
     context_dict['part'] = part
+    context_dict['name'] = name
     return render(request, 'progress/show_problems.html', context=context_dict)
 
 
