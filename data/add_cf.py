@@ -28,7 +28,7 @@ def start():
 
         lst = []
         for p in allp:
-            if ' '+num+' ' in p[3] or num == str(p[0]):
+            if ' '+num in p[3] or num == str(p[0]):
                 lst.append(p)
 
         for i, p in enumerate(lst):
