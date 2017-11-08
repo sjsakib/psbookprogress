@@ -1,42 +1,14 @@
 {% extends "progress/base.html" %}
 
+{% load mytags %}
+
 {% block title_block %}
   Ranklist
 {% endblock title_block %}
 
 {% block section_block %}
   <h1> Ranklist </h1>
-  <table>
-    <thead>
-      <tr>
-        <th class='rank'>#</th>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Progress</th>
-        <th>Last Update</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for usr in users %}
-        <tr class="{% if user.pk == usr.user.pk %}highlight{%endif%}">
-          <td>{{forloop.counter}}</td>
-          <td><a href="{% url 'profile' usr.user.username %}">{{usr.get_name}}</a></td>
-          <td>{{usr.points}}</td>
-          <td>{{usr.get_progress}} %</td>
-          <td>{{usr.last_updated}}</td>
-        </tr>
-      {% endfor %}
-      {% if user_bottom %}
-        <tr class="highlight">
-          <td>{{user_rank}}</td>
-          <td><a href="{% url 'profile' user.username %}">{{user.userprofile.get_name}}</a></td>
-          <td>{{user.userprofile.points}}</td>
-          <td>{{user.userprofile.get_progress}} %</td>
-          <td>{{user.userprofile.last_updated}}</td>
-        </tr>
-      {% endif %}
-    </tbody>
-  </table>
+  {% show_users users user %}
   {% if pages|length > 1 %}
     Pages
     {% for p in pages %}

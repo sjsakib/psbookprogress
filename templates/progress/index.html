@@ -1,5 +1,7 @@
 {% extends "progress/base.html" %}
 
+{% load mytags %}
+
 {% block title_block %}
   Home
 {% endblock title_block %}
@@ -9,49 +11,7 @@
   <p> Here you can track your progress solving the book  <a href="">`সমস্যা ও সমাধান বই - ১`</a> You can also see who else is solving the problems. Sign up with facebook to get started today</p>
   <h2>Top 20</h2>
   <p><a href="{% url 'ranklist' 1 %}">Full Ranklist</a></p>
-  <table>
-    <thead>
-      <tr>
-        <th class='rank'>#</th>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Progress</th>
-        <th>Last Update</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for usr in top_users %}
-        <tr class="{% if user.pk == usr.user.pk %}highlight{%endif%}">
-          <td>{{forloop.counter}}</td>
-          <td><a href="{% url 'profile' usr.user.username %}">{{usr.get_name}}</a></td>
-          <td>{{usr.points}}</td>
-          <td><progress value="{{usr.get_progress}}" max="100">{{usr.get_progress}} %</progress></td>
-          <td>{{usr.last_updated}}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  {% show_users top_users user %}
   <h2> Recently Active</h2>
-  <table>
-    <thead>
-      <tr>
-        <th class='rank'>#</th>
-        <th>Name</th>
-        <th>Points</th>
-        <th>Progress</th>
-        <th>Last Update</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for usr in recently_active %}
-        <tr class="{% if user.pk == usr.user.pk %}highlight{%endif%}">
-          <td>{{forloop.counter}}</td>
-          <td><a href="{% url 'profile' usr.user.username %}">{{usr.get_name}}</a></td>
-          <td>{{usr.points}}</td>
-          <td>{{usr.get_progress}} %</td>
-          <td>{{usr.last_updated}}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  {% show_users recently_active user %}
 {% endblock section_block %}

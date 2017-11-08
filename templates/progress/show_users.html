@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th class='rank'>#</th>
+      <th>Name</th>
+      <th>Points</th>
+      <th>Progress</th>
+      <th>Last Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for usr in users %}
+      <tr class="{% if user.pk == usr.user.pk %}highlight{%endif%}">
+        <td>{{forloop.counter}}</td>
+        <td><a href="{% url 'profile' usr.user.username %}">{{usr.get_name}}</a></td>
+        <td>{{usr.points}}</td>
+        <td><progress value="{{usr.get_progress}}" max="100">{{usr.get_progress}} %</progress></td>
+        <td>{{usr.last_updated}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
