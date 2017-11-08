@@ -1182,5 +1182,29 @@
         "vi",
         "main",
         []
+    ],
+    [
+        "780",
+        "839",
+        "Not so Mobile",
+        "vi",
+        "simple",
+        []
+    ],
+    [
+        "640",
+        "699",
+        "The Falling Leaves",
+        "vi",
+        "simple",
+        []
+    ],
+    [
+        "614",
+        "673",
+        "Parentheses Balance",
+        "vi",
+        "simple",
+        []
     ]
 ]

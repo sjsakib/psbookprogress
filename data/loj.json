@@ -326,5 +326,85 @@
         "v",
         "medium",
         []
+    ],
+    [
+        "1101",
+        "1101",
+        "A Secret Mission",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1128",
+        "1128",
+        "Greatest Parent",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1080",
+        "1080",
+        "Binary Simulation",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1087",
+        "1087",
+        "Diablo",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1089",
+        "1089",
+        "Points in Segments (II)",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1093",
+        "1093",
+        "Ghajini",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1267",
+        "1267",
+        "Points in Rectangle (II)",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1188",
+        "1188",
+        "Fast Queries",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1348",
+        "1348",
+        "Aladdin and the Return Journey",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "1212",
+        "1212",
+        "Double Ended Queue",
+        "vi",
+        "simple",
+        []
     ]
 ]
