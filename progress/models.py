@@ -43,9 +43,9 @@ class Problem(models.Model):
         if self.judge.slug == 'uva':
             return "https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem="+self.pid
         elif self.judge.slug == 'loj':
-            return ''
+            return 'http://lightoj.com/volume_showproblem.php?problem='+self.pid
         elif self.judge.slug == 'cf':
-            return ''
+            return 'http://codeforces.com/problemset/problem/'+'/'.join(self.pid.split('-'))
         elif self.judge.slug == 'timus':
             return "http://acm.timus.ru/problem.aspx?num="+self.pid
 
