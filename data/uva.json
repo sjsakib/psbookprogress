@@ -1062,5 +1062,61 @@
         "v",
         "easy",
         []
+    ],
+    [
+        "4100",
+        "1354",
+        "Mobile Computing",
+        "v",
+        "medium",
+        []
+    ],
+    [
+        "4478",
+        "1603",
+        "Square Destroyer",
+        "v",
+        "medium",
+        []
+    ],
+    [
+        "3259",
+        "12107",
+        "Digit Puzzle",
+        "v",
+        "medium",
+        []
+    ],
+    [
+        "2946",
+        "11846",
+        "Finding Seats Again",
+        "v",
+        "medium",
+        []
+    ],
+    [
+        "2741",
+        "11694",
+        "Gokigen Naname",
+        "v",
+        "medium",
+        []
+    ],
+    [
+        "1325",
+        "10384",
+        "The Wall Pushers",
+        "v",
+        "medium",
+        []
+    ],
+    [
+        "1778",
+        "10837",
+        "A Research Problem",
+        "v",
+        "medium",
+        []
     ]
 ]
