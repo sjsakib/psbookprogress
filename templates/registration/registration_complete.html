@@ -5,5 +5,5 @@
 {% endblock title_block %}
 
 {% block section_block %}
-  <p> Registration complete. Now <a href="{% url 'update_info' %}">update your info </a> to start tracking your progress. Make sure to provide all the <a href="{% url 'help' %}">IDs</a> so that we can fetch all your solved problems</p>
+  <p> Registration complete. Now <a target="_blank" href="{% url 'update_info' %}">update your info </a> to start tracking your progress. Make sure to provide all the <a href="{% url 'help' %}">IDs</a> so that we can fetch all your solved problems. Note that not they are not the usernames</p>
 {% endblock section_block %}

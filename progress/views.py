@@ -173,6 +173,7 @@ def update(request):
                         problem = Problem.objects.get(Q(pid=pid) | Q(problemalias__pid=pid), judge__slug=judge)
                         if not profile.solved_list.filter(pk=problem.pk).exists():
                             profile.solved_list.add(problem)
+                            profile.points += problem.part.points
                             count += 1
                     except Problem.DoesNotExist:
                         pass

@@ -1,7 +1,9 @@
 progress {
     width: 50px;
 }
-input[type=text], input[type=password] {
+input[type=text],
+input[type=password],
+input[type=email] {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -60,12 +62,6 @@ a.block {
     text-align: center;
 }
 
-/*td > a:hover, td > a:focus {
-    font-weight: normal;
-    color: white;
-    background: #267CB9;
-}*/
-
 th.rank {
     width: 30px;
 }
@@ -73,4 +69,8 @@ th.rank {
 img.profile {
     width: 100px;
     height: 100px;
+}
+
+tr.highlight {
+    background: #baffbe;
 }

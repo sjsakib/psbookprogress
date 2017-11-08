@@ -3,6 +3,8 @@
 {% block title_block %}Log in{% endblock %}
 
 {% block section_block %}
+<h1> Login</h1>
+<h3> Welcome Back</h3>
 <form method="post" action="">
     {% csrf_token %}
     {{ form.as_p }}
