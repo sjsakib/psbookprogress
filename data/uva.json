@@ -910,5 +910,69 @@
         "iv",
         "medium",
         []
+    ],
+    [
+        "666",
+        "725",
+        "Division",
+        "v",
+        "main",
+        []
+    ],
+    [
+        "2000",
+        "11059",
+        "Maximum Product",
+        "v",
+        "main",
+        []
+    ],
+    [
+        "465",
+        "524",
+        "Prime Ring Problem",
+        "v",
+        "main",
+        []
+    ],
+    [
+        "3747",
+        "12325",
+        "Zombie's Treasure Chest",
+        "v",
+        "main",
+        []
+    ],
+    [
+        "4089",
+        "1343",
+        "The Rotation Game",
+        "v",
+        "main",
+        []
+    ],
+    [
+        "4120",
+        "1374",
+        "Power Calculus",
+        "v",
+        "main",
+        []
+    ],
+    [
+        "4477",
+        "1602",
+        "Lattice Animals",
+        "v",
+        "main",
+        []
+    ],
+    [
+        "161",
+        "225",
+        "Golygons",
+        "v",
+        "main",
+        []
     ]
 ]
