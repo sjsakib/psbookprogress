@@ -1254,5 +1254,45 @@
         "vi",
         "easy",
         []
+    ],
+    [
+        "1503",
+        "10562",
+        "Undraw the Trees",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "3318",
+        "12166",
+        "Equilibrium Mobile",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "747",
+        "806",
+        "Spatial Structures",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "1351",
+        "10410",
+        "Tree Reconstruction",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "4537",
+        "1662",
+        "Brackets Removal ",
+        "vi",
+        "medium",
+        []
     ]
 ]

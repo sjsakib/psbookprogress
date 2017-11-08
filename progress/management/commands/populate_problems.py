@@ -26,6 +26,7 @@ class Command(BaseCommand):
         chapter = Chapter.objects.get(slug=ch)
         part = Part.objects.get(slug=prt)
 
+        pnum = ''.join(pnum.split('-'))
         problem, new = Problem.objects.get_or_create(pid=pid, judge=self.judge, chapter=chapter, part=part)
         problem.name = self.judge.name + ' ' + pnum + ' - ' + name
         problem.slug = self.judge.slug + '-' + pnum

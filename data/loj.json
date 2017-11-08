@@ -510,5 +510,45 @@
         "vi",
         "easy",
         []
+    ],
+    [
+        "1081",
+        "1081",
+        "Square Queries",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "1120",
+        "1120",
+        "Rectangle Union",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "1424",
+        "1424",
+        "New Land",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "1343",
+        "1343",
+        "Aladdin and the Black Stones",
+        "vi",
+        "medium",
+        []
+    ],
+    [
+        "1204",
+        "1204",
+        "Weird Advertisement",
+        "vi",
+        "medium",
+        []
     ]
 ]
