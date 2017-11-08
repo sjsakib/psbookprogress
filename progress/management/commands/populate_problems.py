@@ -26,14 +26,15 @@ class Command(BaseCommand):
         chapter = Chapter.objects.get(slug=ch)
         part = Part.objects.get(slug=prt)
 
-        problem, _ = Problem.objects.get_or_create(pid=pid, judge=self.judge, chapter=chapter, part=part)
+        problem, new = Problem.objects.get_or_create(pid=pid, judge=self.judge, chapter=chapter, part=part)
         problem.name = self.judge.name + ' ' + pnum + ' - ' + name
         problem.slug = self.judge.slug + '-' + pnum
 
         problem.save()
-        self.stdout.write(self.style.SUCCESS('added '+str(problem)))
+        if new:
+            self.stdout.write(self.style.SUCCESS('added '+str(problem)))
 
-        for al in aliases:
-            alias, _ = ProblemAlias.objects.get_or_create(problem=problem, pid=al)
-            alias.save()
-            self.stdout.write(self.style.SUCCESS('  -- added alias '+str(alias)))
+            for al in aliases:
+                alias, _ = ProblemAlias.objects.get_or_create(problem=problem, pid=al)
+                alias.save()
+                self.stdout.write(self.style.SUCCESS('  -- added alias '+str(alias)))
