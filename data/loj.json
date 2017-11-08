@@ -54,5 +54,93 @@
         "iv",
         "main",
         []
+    ],
+    [
+        "1007",
+        "1007",
+        "Mathematically Hard",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1014",
+        "1014",
+        "Ifter Party",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1028",
+        "1028",
+        "Trailing Zeroes (I)",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1035",
+        "1035",
+        "Intelligent Factorial Factorization",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1054",
+        "1054",
+        "Efficient Pseudo Code",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1067",
+        "1067",
+        "Combinations",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1077",
+        "1077",
+        "How Many Points?",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1090",
+        "1090",
+        "Trailing Zeroes (II)",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1098",
+        "1098",
+        "A New Function",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1109",
+        "1109",
+        "False Ordering",
+        "iv",
+        "simple",
+        []
+    ],
+    [
+        "1163",
+        "1163",
+        "Bank Robbery",
+        "iv",
+        "simple",
+        []
     ]
 ]
