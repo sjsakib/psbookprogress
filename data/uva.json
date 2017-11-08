@@ -270,5 +270,77 @@
         "ii",
         "medium",
         []
+    ],
+    [
+        "1415",
+        "10474",
+        "Where is the Marble?",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "37",
+        "101",
+        "The Blocks Problem",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "1756",
+        "10815",
+        "Andy's First Dictionary",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "92",
+        "156",
+        "Ananagrams",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "3248",
+        "12096",
+        "The SetStack Computer",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "481",
+        "540",
+        "Team Queue",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "72",
+        "136",
+        "Ugly Numbers",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "4467",
+        "1592",
+        "Database",
+        "iii",
+        "main",
+        []
+    ],
+    [
+        "3252",
+        "12100",
+        "Printer Queue",
+        "iii",
+        "main",
+        []
     ]
 ]
