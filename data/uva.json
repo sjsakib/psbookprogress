@@ -1118,5 +1118,69 @@
         "v",
         "medium",
         []
+    ],
+    [
+        "146",
+        "210",
+        "Concurrency Simulator",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "455",
+        "514",
+        "Rails",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "383",
+        "442",
+        "Matrix Chain Multiplication",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "3139",
+        "11988",
+        "Broken Keyboard (a.k.a. Beiju Text)",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "4395",
+        "12657",
+        "Boxes in a Line",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "620",
+        "679",
+        "Dropping Balls",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "58",
+        "122",
+        "Trees on the level",
+        "vi",
+        "main",
+        []
+    ],
+    [
+        "489",
+        "548",
+        "Tree",
+        "vi",
+        "main",
+        []
     ]
 ]
