@@ -5,7 +5,7 @@ from progress.models import Part, Chapter, Judge, Problem, UserProfile, ProblemA
 @admin.register(Problem)
 class ProblemAdmin(admin.ModelAdmin):
     list_display = ('name', 'chapter', 'part')
-    list_filter = ('chapter', 'part')
+    list_filter = ('chapter', 'part', 'judge')
     search_fields = ('name', )
     list_per_page = 50
 
