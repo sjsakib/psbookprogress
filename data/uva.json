@@ -974,5 +974,93 @@
         "v",
         "main",
         []
+    ],
+    [
+        "76",
+        "140",
+        "Bandwidth",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "147",
+        "211",
+        "The Domino Effect",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "759",
+        "818",
+        "Cutting Chains",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "631",
+        "690",
+        "Pipeline Scheduling",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "3265",
+        "12113",
+        "Overlapping Squares",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "4367",
+        "1575",
+        "Factors",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "2155",
+        "11214",
+        "Guarding the Chessboard",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "4308",
+        "1533",
+        "Moving Pegs",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "758",
+        "817",
+        "According to Bartjens",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "3004",
+        "11882",
+        "Biggest Number",
+        "v",
+        "easy",
+        []
+    ],
+    [
+        "4014",
+        "12569",
+        "Planning mobile robot on Tree (EASY Version)",
+        "v",
+        "easy",
+        []
     ]
 ]
