@@ -1206,5 +1206,53 @@
         "vi",
         "simple",
         []
+    ],
+    [
+        "233",
+        "297",
+        "Quadtrees",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "653",
+        "712",
+        "S-Trees",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "477",
+        "536",
+        "Tree Recovery",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "63",
+        "127",
+        "\"Accordian\" Patience",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "182",
+        "246",
+        "10-20-30",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "4068",
+        "1322",
+        "Minimizing Maximizer",
+        "vi",
+        "easy",
+        []
     ]
 ]

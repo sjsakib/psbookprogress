@@ -406,5 +406,109 @@
         "vi",
         "simple",
         []
+    ],
+    [
+        "1113",
+        "1113",
+        "Discover the Web",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1303",
+        "1303",
+        "Ferris Wheel",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1082",
+        "1082",
+        "Array Queries",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1162",
+        "1162",
+        "Min Max Roads",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1083",
+        "1083",
+        "Histogram",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1097",
+        "1097",
+        "Lucky Number",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1103",
+        "1103",
+        "Castle Walls",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1112",
+        "1112",
+        "Curious Robin Hood",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1135",
+        "1135",
+        "Count the Multiples of 3",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1187",
+        "1187",
+        "Lining up Students",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1207",
+        "1207",
+        "Posters for Election",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1266",
+        "1266",
+        "Points in Rectangle",
+        "vi",
+        "easy",
+        []
+    ],
+    [
+        "1293",
+        "1293",
+        "Document Analyzer",
+        "vi",
+        "easy",
+        []
     ]
 ]
