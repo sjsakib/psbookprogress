@@ -806,5 +806,109 @@
         "iv",
         "easy",
         []
+    ],
+    [
+        "749",
+        "808",
+        "Bee Breeding",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "230",
+        "294",
+        "Divisors",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "2521",
+        "11526",
+        "H(n)",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "2046",
+        "11105",
+        "Semi-prime H-numbers",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "4524",
+        "1649",
+        "Binomial coefficients",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "1581",
+        "10640",
+        "Planes around the World",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "1420",
+        "10479",
+        "The Hendrie Sequence",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "707",
+        "766",
+        "Sum of powers",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "3965",
+        "12520",
+        "Square Garden",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "4035",
+        "12590",
+        "Guards II",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "4527",
+        "1652",
+        "Fibonacci System",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "2995",
+        "11895",
+        "Honorary Tickets",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "1917",
+        "10976",
+        "Fractions Again?!",
+        "iv",
+        "medium",
+        []
     ]
 ]
