@@ -270,5 +270,37 @@
         "iv",
         "easy",
         []
+    ],
+    [
+        "1234",
+        "1234",
+        "Harmonic Number",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "1298",
+        "1298",
+        "One Theorem, One Year",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "1318",
+        "1318",
+        "Strange Game",
+        "iv",
+        "medium",
+        []
+    ],
+    [
+        "1161",
+        "1161",
+        "Extreme GCD",
+        "iv",
+        "medium",
+        []
     ]
 ]
