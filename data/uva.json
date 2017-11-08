@@ -710,5 +710,101 @@
         "iv",
         "simple",
         []
+    ],
+    [
+        "1981",
+        "11040",
+        "Add bricks in the wall",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "4519",
+        "1644",
+        "Prime Gap",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "3651",
+        "1210",
+        "Sum of Consecutive Prime Numbers",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1480",
+        "10539",
+        "Almost Prime Numbers",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1563",
+        "10622",
+        "Perfect P-th Powers",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "4521",
+        "1646",
+        "Edge Case",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1827",
+        "10886",
+        "Standard Deviation",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "4522",
+        "1647",
+        "Computer Transformation",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "2203",
+        "11246",
+        "K-Multiple Free set ",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "2107",
+        "11166",
+        "Power Signs",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "2278",
+        "11303",
+        "Permutations",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "4530",
+        "1655",
+        "Exam",
+        "iv",
+        "easy",
+        []
     ]
 ]
