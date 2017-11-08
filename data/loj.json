@@ -142,5 +142,133 @@
         "iv",
         "simple",
         []
+    ],
+    [
+        "1024",
+        "1024",
+        "Eid",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1138",
+        "1138",
+        "Trailing Zeroes (III)",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1197",
+        "1197",
+        "Help Hanzo",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1213",
+        "1213",
+        "Fantasy of a Summation",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1214",
+        "1214",
+        "Large Division",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1259",
+        "1259",
+        "Goldbach`s Conjecture",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1333",
+        "1333",
+        "Grid Coloring",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1336",
+        "1336",
+        "Sigma Function",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1340",
+        "1340",
+        "Story of Tomisu Ghost",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1370",
+        "1370",
+        "Bi-shoe and Phi-shoe",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1038",
+        "1038",
+        "Race to 1 Again",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1104",
+        "1104",
+        "Birthday Paradox",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1151",
+        "1151",
+        "Snakes and Ladders",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1248",
+        "1248",
+        "Dice (III)",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1256",
+        "1256",
+        "Word Puzzle",
+        "iv",
+        "easy",
+        []
+    ],
+    [
+        "1058",
+        "1058",
+        "Parallelogram Counting",
+        "iv",
+        "easy",
+        []
     ]
 ]
