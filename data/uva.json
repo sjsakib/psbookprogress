@@ -430,5 +430,61 @@
         "iii",
         "simple",
         []
+    ],
+    [
+        "4473",
+        "1598",
+        "Exchange",
+        "iii",
+        "easy",
+        []
+    ],
+    [
+        "3755",
+        "12333",
+        "Revenge of Fibonacci",
+        "iii",
+        "easy",
+        []
+    ],
+    [
+        "148",
+        "212",
+        "Use of Hospital Facilities",
+        "iii",
+        "easy",
+        []
+    ],
+    [
+        "143",
+        "207",
+        "PGA Tour Prize Money",
+        "iii",
+        "easy",
+        []
+    ],
+    [
+        "755",
+        "814",
+        "The Letter Carrier's Rounds",
+        "iii",
+        "easy",
+        []
+    ],
+    [
+        "157",
+        "221",
+        "Urban Elevations",
+        "iii",
+        "easy",
+        []
+    ],
+    [
+        "4472",
+        "1597",
+        "Searching the Web",
+        "iii",
+        "easy",
+        []
     ]
 ]
