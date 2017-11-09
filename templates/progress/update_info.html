@@ -7,7 +7,7 @@
 {% block section_block %}
   <h1> Update your info</h1>
   <p> <a target="_blank" href="{% url 'help' %}">See how to find the ids</a></p>
-  <form method="post" action="{% url 'update_info' %}">
+  <form method="post" action="{% url 'update_info' %}" enctype="multipart/form-data">
     {% csrf_token %}
     {{user_form.as_p}}
     {{profile_form.as_p}}
