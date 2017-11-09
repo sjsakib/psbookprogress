@@ -16,9 +16,9 @@ def start_spider(request, username):
         data['cf'] = profile.cf_id
     if profile.loj_id:
         data['loj'] = profile.loj_id
-    if profile.cf_id:
+    if profile.uva_id:
         data['uva'] = profile.uva_id
-    if profile.cf_id:
+    if profile.timus_id:
         data['timus'] = profile.timus_id
 
     client = ScrapinghubClient(SHUB_KEY)
