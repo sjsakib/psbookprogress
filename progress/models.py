@@ -61,7 +61,7 @@ class UserProfile(models.Model):
     uva_id = models.CharField(max_length=50, blank=True, verbose_name='UVa ID')
     timus_id = models.CharField(max_length=50, blank=True, verbose_name='Timus ID')
 
-    solved_list = models.ManyToManyField(Problem)
+    solved_list = models.ManyToManyField(Problem, blank=True)
 
     last_updated = models.DateTimeField(blank=True, null=True)
     status = models.CharField(max_length=200, blank=True)
