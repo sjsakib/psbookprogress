@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -118,10 +119,14 @@ USE_L10N = True
 
 USE_TZ = True
 
+# scrapinghub
+SHUB_KEY = config('SHUB_KEY')
+SHUB_PROJECT = '246822'
+
 # login
 LOGIN_REDIRECT_URL = '/profile/'
 
-# media 
+# media
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'

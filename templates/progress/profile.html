@@ -27,7 +27,7 @@
   <p>
     Last updated {{profile.last_updated}}
     {{profile.status}}<br>
-    <a href="">Request Update</a>
+    <a href="{% url 'request' profile.user.username %}">Request Update</a>
   </p>
   <table>
     <thead>

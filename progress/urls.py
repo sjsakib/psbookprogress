@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from progress import views
+from progress import views, views_api
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^ranklist/$', views.ranklist, name='ranklist'),
     url(r'^ranklist/page/(?P<page>\d+)/$', views.ranklist, name='ranklist'),
     url(r'^help/$', views.help, name='help'),
-    url(r'^update/$', views.update, name='update')
+    url(r'^update/$', views.update, name='update'),
+    url(r'^request/(?P<username>[^/]+)$', views_api.start_spider, name='request'),
 ]
