@@ -42,9 +42,7 @@ class Command(BaseCommand):
             self.add_chapter(*ch)
 
     def add_part(self, p, points):
-        part, _ = Part.objects.get_or_create(slug=p)
-        part.slug = p
-        part.points = points
+        part, _ = Part.objects.get_or_create(slug=p, points=points)
         part.save()
         self.stdout.write(self.style.SUCCESS('added part '+str(part)))
 
