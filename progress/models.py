@@ -2,6 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
+from PIL import Image
+from io import BytesIO
+from django.core.files.uploadedfile import InMemoryUploadedFile
+import sys
+
 
 class Chapter(models.Model):
     name = models.CharField(max_length=100)
@@ -87,6 +92,23 @@ class UserProfile(models.Model):
             if u.pk == self.pk:
                 return i+1
         return -1
+
+    def save(self, *args, **kwargs):
+        if self.picture:
+            im = Image.open(self.picture)
+            output = BytesIO()
+            im = im.resize((150, 150))
+            im = im.convert("RGB")
+            im.save(output, format='JPEG', quality=100)
+            output.seek(0)
+
+            self.picture = InMemoryUploadedFile(output,
+                                                'ImageField',
+                                                '%s.jpg' % self.picture.name.split('.')[0],
+                                                'image/jpeg', sys.getsizeof(output),
+                                                None)
+
+        super(UserProfile, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.user.username
