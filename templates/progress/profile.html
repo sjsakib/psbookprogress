@@ -13,19 +13,19 @@
   {% endif %}
   <p class="info">
     {{profile.get_name}} </br>
-    {{profile.institute}} </br>
-    {{profile.location}} <br/>
+    {% if profile.institute %} {{profile.institute}} </br> {% endif %}
+    {% if profile.location %} {{profile.location}} <br/> {% endif %}
     <br/>
+    Rank: {{profile.get_rank}} <br/>
     Points: {{profile.points}}<br/>
     Progress: {{profile.get_progress}} %<br/>
-    Rank: {{profile.get_rank}} <br/>
   </p>
 {% endblock header_block %}
 
 {% block section_block %}
-  <h1> Progress of {{profile.user.username}}</h1>
+  <h1> Progress of {{profile.get_name}}</h1>
   <p>
-    Last updated {{profile.last_updated}}
+    {% if progile.last_updated %} Last updated {{profile.last_updated}} {% endif %}
     {{profile.status}}<br>
     <a href="{% url 'request' profile.user.username %}">Request Update</a>
   </p>
