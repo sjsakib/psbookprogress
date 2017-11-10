@@ -4,6 +4,7 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 from progress.models import Problem, Chapter, Part, Judge, UserProfile
 from progress.forms import UserForm, UserProfileForm
 import json
@@ -62,6 +63,7 @@ def profile(request, username=None):
     return render(request, 'progress/profile.html', context={'profile': profile, 'chapters': ch_list})
 
 
+@login_required
 def update_info(request):
 
     if request.method == 'POST':
