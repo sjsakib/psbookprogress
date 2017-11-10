@@ -40,6 +40,10 @@ ul.menu {
     padding: 0px;
 }
 
+ul.errorlist {
+    color: #f86666;
+}
+
 .bool {
     color: white;
     padding: 0 1em;
