@@ -95,6 +95,12 @@ class UserProfile(models.Model):
 
     def save(self, *args, **kwargs):
         if self.picture:
+            if self.pk:
+                this = UserProfile.objects.get(pk=self.pk)
+                if this.picture.name == self.picture.name:
+                    super(UserProfile, self).save(*args, **kwargs)
+                    return
+
             im = Image.open(self.picture)
             output = BytesIO()
             im = im.resize((150, 150))
@@ -107,7 +113,6 @@ class UserProfile(models.Model):
                                                 '%s.jpg' % self.picture.name.split('.')[0],
                                                 'image/jpeg', sys.getsizeof(output),
                                                 None)
-
         super(UserProfile, self).save(*args, **kwargs)
 
     def __str__(self):
