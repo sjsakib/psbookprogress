@@ -28,7 +28,7 @@ class Command(BaseCommand):
         ('Data Structure', 'ch-vi'),
         ('Greedy', 'ch-vii'),
         ('Dynamic Programming', 'ch-viii'),
-        ('Graph Theory', 'ix'),
+        ('Graph Theory', 'ch-ix'),
         ('Adhoc', 'ch-x'),
         ('Geometry', 'ch-xi'),
     )
