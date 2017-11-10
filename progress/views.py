@@ -170,7 +170,6 @@ def update(request):
             count = 0
             for judge, plist in item['judges'].items():
                 for pid in plist:
-                    print(judge, profile, pid)
                     try:
                         problem = Problem.objects.get(Q(pid=pid) | Q(problemalias__pid=pid), judge__slug=judge)
                         if not profile.solved_list.filter(pk=problem.pk).exists():
