@@ -10,6 +10,8 @@
 {% block header_block %}
   {% if profile.picture %}
     <img src="{{profile.picture.url}}" class="profile">
+  {% else %}
+    <img src="{% static 'images/anonymous.png' %}" class="profile">
   {% endif %}
   <p class="info">
     {{profile.get_name}} </br>

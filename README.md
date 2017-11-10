@@ -3,8 +3,6 @@ This is a small web app to track progress of the book [`সমস্যা ও �
 
 ## TODO
 
-- [ ] add default profile picture
-
 
 ## To Implement
 
