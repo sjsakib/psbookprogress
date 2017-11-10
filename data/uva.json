@@ -1294,5 +1294,477 @@
         "vi",
         "medium",
         []
+    ],
+    [
+        "378",
+        "437",
+        "The Tower of Babylon",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4093",
+        "1347",
+        "Tour",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "52",
+        "116",
+        "Unidirectional TSP",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4008",
+        "12563",
+        "Jin Ge Jin Qu hao",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "2395",
+        "11400",
+        "Lighting System Design",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "2631",
+        "11584",
+        "Partitioning by Palindromes",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4500",
+        "1625",
+        "Color Length",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "944",
+        "10003",
+        "Cutting Sticks",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4501",
+        "1626",
+        "Brackets sequence",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4077",
+        "1331",
+        "Minimax Triangulation",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3661",
+        "1220",
+        "Party at Hali-Bula",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3659",
+        "1218",
+        "Perfect Service",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3693",
+        "1252",
+        "Twenty Questions",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4158",
+        "1412",
+        "Fund Management",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "1875",
+        "10934",
+        "Dropping water balloons",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4082",
+        "1336",
+        "Fixing the Great Wall",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3257",
+        "12105",
+        "Bigger is Better",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3645",
+        "1204",
+        "Fun Game",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3251",
+        "12099",
+        "The Bookcase",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3322",
+        "12170",
+        "Easy Climb",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4126",
+        "1380",
+        "A Scheduling Problem",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "1500",
+        "10559",
+        "Blocks",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "3669",
+        "1228",
+        "Integer Transmission",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "4503",
+        "1628",
+        "Pizza Delivery",
+        "viii",
+        "main",
+        []
+    ],
+    [
+        "1226",
+        "10285",
+        "Longest Run on a Snowboard",
+        "viii",
+        "simple",
+        []
+    ],
+    [
+        "4318",
+        "1543",
+        "Telescope",
+        "viii",
+        "simple",
+        []
+    ],
+    [
+        "3654",
+        "1213",
+        "Sum of Different Primes",
+        "viii",
+        "simple",
+        []
+    ],
+    [
+        "4520",
+        "1645",
+        "Count",
+        "viii",
+        "simple",
+        []
+    ],
+    [
+        "4525",
+        "1650",
+        "Number String",
+        "viii",
+        "simple",
+        []
+    ],
+    [
+        "3215",
+        "12063",
+        "Zeros and Ones",
+        "viii",
+        "simple",
+        []
+    ],
+    [
+        "1559",
+        "10618",
+        "Tango Tango Insurrection",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "1059",
+        "10118",
+        "Free Candies",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4504",
+        "1629",
+        "Cake slicing",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4505",
+        "1630",
+        "Folding",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "178",
+        "242",
+        "Stamps and Envelope Size",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "1664",
+        "10723",
+        "Cyborg Genes",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4506",
+        "1631",
+        "Locker",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4508",
+        "1633",
+        "Dyslexic Gollum",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "3245",
+        "12093",
+        "Protecting Zonk",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4034",
+        "12589",
+        "Learning Vector",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4125",
+        "1379",
+        "Pitcher Rotation",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4117",
+        "1371",
+        "Period",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4512",
+        "1637",
+        "Double Patience",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4139",
+        "1393",
+        "Highways",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4136",
+        "1390",
+        "Interconnect",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4160",
+        "1414",
+        "Hanoi Towers",
+        "viii",
+        "easy",
+        []
+    ],
+    [
+        "4185",
+        "1439",
+        "Exclusive Access 2",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "4121",
+        "1375",
+        "The Best Name for Your Baby",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "4507",
+        "1632",
+        "Alibaba",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "1582",
+        "10641",
+        "Barisal Stadium",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "3902",
+        "1289",
+        "Stacking Plates",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "4189",
+        "1443",
+        "Garlands",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "4371",
+        "1579",
+        "Matryoshka",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "3133",
+        "11982",
+        "Fantasy Cricket",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "3793",
+        "12371",
+        "Guards",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "3364",
+        "12212",
+        "Password Remembering",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "4529",
+        "1654",
+        "Pairs of integers",
+        "viii",
+        "medium",
+        []
+    ],
+    [
+        "4509",
+        "1634",
+        "The Picnic",
+        "viii",
+        "hard",
+        []
+    ],
+    [
+        "1212",
+        "10271",
+        "Chopsticks",
+        "viii",
+        "hard",
+        []
     ]
 ]
