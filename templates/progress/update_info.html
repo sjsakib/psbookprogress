@@ -6,7 +6,7 @@
 
 {% block section_block %}
   <h1> Update your info</h1>
-  <p> <a target="_blank" href="{% url 'help' %}">See how to find the ids</a></p>
+  <p class="attention"> See how to find the <a target="_blank" href="{% url 'help' %}">IDs</a>. Note that they are not the usernames you use to login (except for codeforces )</p>
   <form method="post" action="{% url 'update_info' %}" enctype="multipart/form-data">
     {% csrf_token %}
     {{user_form.as_p}}
