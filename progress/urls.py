@@ -1,5 +1,13 @@
 from django.conf.urls import url
+from django.urls import reverse
 from progress import views, views_api
+from registration.backends.simple.views import RegistrationView
+
+
+class MyRegistrationView(RegistrationView):
+    def get_success_url(self, user=None):
+        return '/update-info/'  # can't use reverse
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -13,4 +21,7 @@ urlpatterns = [
     url(r'^help/$', views.help, name='help'),
     url(r'^update/$', views.update, name='update'),
     url(r'^request/(?P<username>[^/]+)$', views_api.start_spider, name='request'),
+    url(r'^accounts/register/$',
+        MyRegistrationView.as_view(),
+        name='registration_register'),
 ]
