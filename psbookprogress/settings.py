@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [config('ALLOWED_HOST')]
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',  # need to put it before contrib.auth
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'progress',
-    'registration',
     'django_extensions',
 ]
 
