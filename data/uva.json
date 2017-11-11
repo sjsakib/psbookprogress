@@ -1902,5 +1902,653 @@
         "ix",
         "main",
         []
+    ],
+    [
+        "3592",
+        "1151",
+        "Buy or Build",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "183",
+        "247",
+        "Calling Circles",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "4533",
+        "1658",
+        "Admiral",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "762",
+        "821",
+        "Page Hopping",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "761",
+        "820",
+        "Internet Bandwidth",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "1246",
+        "10305",
+        "Ordering Tasks",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "144",
+        "208",
+        "Firetruck",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "380",
+        "439",
+        "Knight Moves",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "447",
+        "506",
+        "System Dependencies",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "513",
+        "572",
+        "Oil Deposits",
+        "ix",
+        "simple",
+        []
+    ],
+    [
+        "4475",
+        "1600",
+        "Patrol Robot",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "599",
+        "658",
+        "It's not a Bug, it's a Feature!",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "1592",
+        "10651",
+        "Pebble Solitaire",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "4399",
+        "12661",
+        "Funny Car Racing",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "3442",
+        "1001",
+        "Say Cheese",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "4535",
+        "1660",
+        "Cable TV Network",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "1742",
+        "10801",
+        "Lift Hopping",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "4538",
+        "1663",
+        "Purifying Machine",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "3416",
+        "12264",
+        "Risk",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "3371",
+        "12219",
+        "Common Subexpression Elimination",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "3466",
+        "1025",
+        "A Spy in the Metro",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "4476",
+        "1601",
+        "The Morning after Halloween",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "3544",
+        "1103",
+        "Ancient Messages",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "745",
+        "804",
+        "Petri Net Simulation",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "751",
+        "810",
+        "A Dicey Problem",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "757",
+        "816",
+        "Abbott's Revenge",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "4540",
+        "1665",
+        "Islands",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "1594",
+        "10653",
+        "Bombs! NO they are Mines!!",
+        "ix",
+        "easy",
+        []
+    ],
+    [
+        "3892",
+        "1279",
+        "Asteroid Rangers",
+        "ix",
+        "medium",
+        []
+    ],
+    [
+        "3994",
+        "12549",
+        "Sentry Robots",
+        "ix",
+        "medium",
+        []
+    ],
+    [
+        "4542",
+        "1667",
+        "Network Mess",
+        "ix",
+        "medium",
+        []
+    ],
+    [
+        "4544",
+        "1669",
+        "Holiday's Accommodatio",
+        "ix",
+        "medium",
+        []
+    ],
+    [
+        "4543",
+        "1668",
+        "Let's Go Green",
+        "ix",
+        "medium",
+        []
+    ],
+    [
+        "4545",
+        "1670",
+        "Kingdom Roadmap",
+        "ix",
+        "medium",
+        []
+    ],
+    [
+        "4264",
+        "1518",
+        "Train delays",
+        "ix",
+        "medium",
+        []
+    ],
+    [
+        "56",
+        "120",
+        "Stacks of Flapjacks",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4480",
+        "1605",
+        "Building for UN",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "3593",
+        "1152",
+        "4 Values whose Sum is 0",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "2075",
+        "11134",
+        "Fabled Rooks",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "1995",
+        "11054",
+        "Wine trading in Gergovia",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "2619",
+        "11572",
+        "Unique Snowflakes",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4481",
+        "1606",
+        "Amphiphilic Carbon Molecules",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4217",
+        "1471",
+        "Defense Lines",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "1895",
+        "10954",
+        "Add All",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4352",
+        "12627",
+        "Erratic Expansion",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4197",
+        "1451",
+        "Average",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "655",
+        "714",
+        "Copying Books",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "2034",
+        "11093",
+        "Just Finish it up",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4482",
+        "1607",
+        "Gates",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "3326",
+        "12174",
+        "Shuffle",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4483",
+        "1608",
+        "Non-boring sequences",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4484",
+        "1609",
+        "Foul Play",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "4188",
+        "1442",
+        "Cav",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "3417",
+        "12265",
+        "Selling Land",
+        "x",
+        "main",
+        []
+    ],
+    [
+        "3590",
+        "1149",
+        "Bin Packing",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "4485",
+        "1610",
+        "Party Games",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "3990",
+        "12545",
+        "Bits Equalizer",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "2486",
+        "11491",
+        "Erasing and Winning",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "4486",
+        "1611",
+        "Crane",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "4491",
+        "1616",
+        "Caravan Robbers",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "4492",
+        "1617",
+        "Laptop",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "4493",
+        "1618",
+        "Weak Key",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "2531",
+        "11536",
+        "Smallest Sub-Array",
+        "x",
+        "simple",
+        []
+    ],
+    [
+        "113",
+        "177",
+        "Paper Folding",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "3076",
+        "11925",
+        "Generating Permutations",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "4487",
+        "1612",
+        "Guess",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "3594",
+        "1153",
+        "Keep the Customer Satisfied",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "4490",
+        "1615",
+        "Highway",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "1511",
+        "10570",
+        "Meeting with Aliens",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "4494",
+        "1619",
+        "Feel Good",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "4058",
+        "1312",
+        "Cricket Field",
+        "x",
+        "easy",
+        []
+    ],
+    [
+        "4488",
+        "1613",
+        "K-Graph Oddity",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "4489",
+        "1614",
+        "Hell on the Markets",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "4495",
+        "1620",
+        "Lazy Susan",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "4496",
+        "1621",
+        "Jumping Around",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "4497",
+        "1622",
+        "Robot",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "4498",
+        "1623",
+        "Enter The Dragon",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "1307",
+        "10366",
+        "Faucet Flow",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "2116",
+        "11175",
+        "From D to E and Back",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "4372",
+        "1580",
+        "Pirate Chest",
+        "x",
+        "medium",
+        []
+    ],
+    [
+        "4499",
+        "1624",
+        "Knots",
+        "x",
+        "medium",
+        []
     ]
 ]
