@@ -8,7 +8,10 @@
 
 {% block section_block %}
   <h1>Welcome To PSBook Progress </h1>
-  <p> Here you can track your progress solving the book  <a href="https://github.com/shanto86/problem-book-1-solutions" target="_blank">`সমস্যা ও সমাধান বই - ১`</a> by Mahbubul Hasan. You can also see who else is solving the problems. <a href="{% url 'registration_register' %}">Register</a> to get started now.</p>
+  <p> Here you can track your progress solving the book  <a href="https://github.com/shanto86/problem-book-1-solutions" target="_blank">`সমস্যা ও সমাধান বই - ১`</a> by Mahbubul Hasan. You can see who else is solving the problems. You also get a list of the problems with direct link, and link to search the GitHub repo, in one place. Click the progress bars in your profile to see list of the problems in that part.</p>
+  {% if not user.is_authenticated %}
+    <p> <a href="{% url 'registration_register' %}">Register</a> or <a href="{% url 'auth_login' %}">login</a> to get started now.</p>
+  {% endif %}
   <h2>Top 20</h2>
   <p><a href="{% url 'ranklist' 1 %}">Full Ranklist</a></p>
   {% show_users top_users user %}
