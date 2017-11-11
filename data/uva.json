@@ -2550,5 +2550,341 @@
         "x",
         "medium",
         []
+    ],
+    [
+        "126",
+        "190",
+        "Circle Through Three Points",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "314",
+        "378",
+        "Intersecting Lines",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "401",
+        "460",
+        "Overlapping Rectangles",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1116",
+        "10175",
+        "Sphere",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1463",
+        "10522",
+        "Height to Area",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1650",
+        "10709",
+        "Intersection is Not that Easy",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1920",
+        "10979",
+        "How Many Triangles?",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1615",
+        "10674",
+        "Tangents",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1224",
+        "10283",
+        "The Kissing Circles",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1227",
+        "10286",
+        "Trouble with a Pentagon",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1636",
+        "10695",
+        "Find the Point",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1750",
+        "10809",
+        "Great Circle",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "1030",
+        "10089",
+        "Repackaging",
+        "xi",
+        "main",
+        []
+    ],
+    [
+        "417",
+        "476",
+        "Points in Figures: Rectangles",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "418",
+        "477",
+        "Points in Figures: Rectangles and Circles",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "419",
+        "478",
+        "Points in Figures: Rectangles, Circles, Triangles",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "127",
+        "191",
+        "Intersection",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "379",
+        "438",
+        "The Circumference of the Circle",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "394",
+        "453",
+        "Intersecting Circles",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "1514",
+        "10573",
+        "Geometry Paradox",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "1666",
+        "10725",
+        "Triangular Square",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "1183",
+        "10242",
+        "Fourth Point !!",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "1282",
+        "10341",
+        "Solve It",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "154",
+        "218",
+        "Moth Eradication",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "297",
+        "361",
+        "Cops and Robbers",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "45",
+        "109",
+        "SCUD Busters",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "537",
+        "596",
+        "The Incredible Hull",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "1006",
+        "10065",
+        "Useless Tile Packers",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "1186",
+        "10245",
+        "The Closest Pair Problem",
+        "xi",
+        "simple",
+        []
+    ],
+    [
+        "2627",
+        "11580",
+        "Finding the Transmitter",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1343",
+        "10402",
+        "Triangle Covering",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "2064",
+        "11123",
+        "Counting Trapizoid",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1950",
+        "11009",
+        "Geometry Once Again",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1263",
+        "10322",
+        "The Four in One Stadium",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1327",
+        "10386",
+        "Circles in Triangle",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1572",
+        "10631",
+        "Normals",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "760",
+        "819",
+        "Gifts Large and Small",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1076",
+        "10135",
+        "Herding Frosh",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1197",
+        "10256",
+        "The Great Divide",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1151",
+        "10210",
+        "Romeo and Juliet !",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1192",
+        "10251",
+        "Min-Max Cake",
+        "xi",
+        "medium",
+        []
+    ],
+    [
+        "1422",
+        "10481",
+        "The Gift Wrappers of Hollywood",
+        "xi",
+        "medium",
+        []
     ]
 ]
