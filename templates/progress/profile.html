@@ -27,7 +27,7 @@
 {% block section_block %}
   <h1> Progress of {{profile.get_name}}</h1>
   <p>
-    {% if progile.last_updated %} Last updated {{profile.last_updated}} {% endif %}
+    {% if profile.last_updated %} Last updated {{profile.last_updated}} {% endif %}
     {{profile.status}}<br>
     <a href="{% url 'request' profile.user.username %}">Request Update</a>
   </p>
