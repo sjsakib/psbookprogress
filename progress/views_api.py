@@ -21,6 +21,11 @@ def start_spider(request, username):
     if profile.timus_id:
         data['timus'] = profile.timus_id
 
+    if len(data) == 1:
+        profile.status = "You haven't provided any of your IDs!"
+        profile.save()
+        return HttpResponseRedirect(reverse('profile', args=[username]))
+
     client = ScrapinghubClient(SHUB_KEY)
     project = client.get_project(SHUB_PROJECT)
     try:
