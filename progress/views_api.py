@@ -22,7 +22,7 @@ def start_spider(request, username):
         data['timus'] = profile.timus_id
 
     if len(data) == 1:
-        profile.status = "You haven't provided any of your IDs!"
+        profile.status = "No IDs found to scrape progress."
         profile.save()
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
