@@ -82,6 +82,7 @@ class UserProfile(models.Model):
             return self.user.first_name + ' ' + self.user.last_name
         else:
             return self.user.username
+    get_name.short_description = 'Name'
 
     def get_progress(self):
         return int((self.points/Variable.get('total_points'))*100)
