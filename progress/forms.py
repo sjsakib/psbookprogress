@@ -20,7 +20,7 @@ class UserProfileForm(forms.ModelForm):
 
 
 class TipForm(forms.ModelForm):
-    allowed_tags = bleach.sanitizer.ALLOWED_TAGS + ['iframe', 'pre']
+    allowed_tags = bleach.sanitizer.ALLOWED_TAGS + ['iframe', 'pre', 'br']
     allowed_attributes = {**bleach.sanitizer.ALLOWED_ATTRIBUTES, **{'iframe': ['src', 'frameborder', 'allowfullscreen']}}
 
     help_text = "Supported HTML tags are: " + ', '.join(allowed_tags)
