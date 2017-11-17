@@ -113,6 +113,18 @@ def show_problems(request, chapter_slug, part, username=''):
     return render(request, 'progress/show_problems.html', context=context_dict)
 
 
+def show_tips(request, problem_slug):
+    try:
+        problem = Problem.objects.get(slug=problem_slug)
+    except Problem.DoesNotExist:
+        raise Http404()
+
+    tips = problem.tip_set.all()
+
+    return render(request, 'progress/show_tips.html', context={'tips': tips,
+                                                               'problem': problem})
+
+
 def solved_by(request, problem_slug, page=1):
     page = int(page)
     per_page = 100

@@ -1,0 +1,19 @@
+{% extends "progress/base.html" %}
+
+{% block title_block %}
+  Tips for {{problem.name}}
+{% endblock title_block %}
+
+{% block section_block %}
+  <h1>Tips for {{problem.name}}</h1>
+
+  {% for tip in tips %}
+    <h2> Tip #{{forloop.counter}}</h2>
+    <p>By <a href="{% url 'profile' tip.author.user.username %}">{{tip.author.get_name}}</a> <br>
+    {{tip.time}}</p>
+    <hr>
+    <p> {{tip.content|safe}} </p>
+    <br>
+    <br>
+  {% endfor %}
+{% endblock section_block %}

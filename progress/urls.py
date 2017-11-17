@@ -14,8 +14,11 @@ urlpatterns = [
     url(r'^profile/$', views.profile, name='my_profile'),
     url(r'^profile/(?P<username>[^/]+)/$', views.profile, name='profile'),
     url(r'^update-info/$', views.update_info, name='update_info'),
+
     url(r'^showproblems/(?P<chapter_slug>ch-\w+)/(?P<part>\w+)/(?P<username>[^/]+)/', views.show_problems, name='show_problems'),
+    url(r'^tips/problem/(?P<problem_slug>[\w\d-]+)/$', views.show_tips, name='show_tips'),
     url(r'^problem/(?P<problem_slug>[\w-]+)/solved-by/page/(?P<page>\d+)$', views.solved_by, name='solved_by'),
+
     url(r'^ranklist/$', views.ranklist, name='ranklist'),
     url(r'^ranklist/page/(?P<page>\d+)/$', views.ranklist, name='ranklist'),
     url(r'^help/$', views.help, name='help'),
