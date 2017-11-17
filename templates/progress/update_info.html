@@ -6,7 +6,7 @@
 
 {% block section_block %}
   <h1> Update your info</h1>
-  <p class="attention"> See how to find the <a target="_blank" href="{% url 'help' %}">IDs</a>. Note that they are not the usernames (except for codeforces ). And after providing your <a target="_blank" href="{% url 'help' %}">IDs</a> click <b>Request update </b> on top of your profile so that our spiders can get your progress.</p>
+  <p class="attention"> See how to find the <a target="_blank" href="{% url 'help' %}">IDs</a>. Note that those are not the usernames (except for codeforces ). And after providing your <a target="_blank" href="{% url 'help' %}">IDs</a> click <b>Request update </b> on top of your profile so that our spiders can get your progress.</p>
   <form method="post" action="{% url 'update_info' %}" enctype="multipart/form-data">
     {% csrf_token %}
     {{user_form.as_p}}
