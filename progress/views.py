@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.db.models import Q
-from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.http import HttpResponse, Http404, HttpResponseForbidden, HttpResponseRedirect
 from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
-from progress.models import Problem, Chapter, Part, Judge, UserProfile
+from progress.models import Problem, Chapter, Part, Judge, UserProfile, Tip
 from progress.forms import UserForm, UserProfileForm, TipForm
 import json
 from math import ceil
@@ -135,6 +135,19 @@ def show_tips(request, problem_slug):
     return render(request, 'progress/show_tips.html', context={'tips': tips,
                                                                'problem': problem,
                                                                'form': form})
+
+
+def delete_tip(request, tip_id):
+    try:
+        tip = Tip.objects.get(pk=tip_id)
+    except Tip.DoesNotExist:
+        raise Http404()
+    if request.user.is_authenticated() and request.user.userprofile == tip.author:
+        tip.delete()
+    else:
+        return HttpResponseForbidden()
+
+    return HttpResponseRedirect(reverse('show_tips', args=[tip.problem.slug]))
 
 
 def solved_by(request, problem_slug, page=1):

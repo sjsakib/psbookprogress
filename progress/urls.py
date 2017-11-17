@@ -17,6 +17,7 @@ urlpatterns = [
 
     url(r'^showproblems/(?P<chapter_slug>ch-\w+)/(?P<part>\w+)/(?P<username>[^/]+)/', views.show_problems, name='show_problems'),
     url(r'^tips/problem/(?P<problem_slug>[\w\d-]+)/$', views.show_tips, name='show_tips'),
+    url(r'^tips/(?P<tip_id>\d+)/delete/$', views.delete_tip, name='delete_tip'),
     url(r'^problem/(?P<problem_slug>[\w-]+)/solved-by/page/(?P<page>\d+)$', views.solved_by, name='solved_by'),
 
     url(r'^ranklist/$', views.ranklist, name='ranklist'),

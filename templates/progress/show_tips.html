@@ -9,8 +9,13 @@
 
   {% for tip in tips %}
     <h2> Tip #{{forloop.counter}}</h2>
-    <p>By <a href="{% url 'profile' tip.author.user.username %}">{{tip.author.get_name}}</a> <br>
-    {{tip.time}}</p>
+    <p>
+      By <a href="{% url 'profile' tip.author.user.username %}">{{tip.author.get_name}}</a> <br>
+      {{tip.time}}
+      {% if user.is_authenticated and user.userprofile == tip.author %}
+        (<a href="{% url 'delete_tip' tip.pk %}">delete</a>)
+      {% endif %}
+    </p>
     <hr>
     <p> {{tip.content|safe}} </p>
     <br>
