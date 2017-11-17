@@ -3,7 +3,7 @@ progress {
 }
 input[type=text],
 input[type=password],
-input[type=email] {
+input[type=email], {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -15,6 +15,13 @@ input[type=submit], button {
     padding: 3px 8px;
     background: white;
     border-radius: 3px;
+}
+
+textarea#id_content {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 table.input th, table.input td {

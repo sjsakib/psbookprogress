@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from progress.models import Problem, Chapter, Part, Judge, UserProfile
-from progress.forms import UserForm, UserProfileForm
+from progress.forms import UserForm, UserProfileForm, TipForm
 import json
 from math import ceil
 
@@ -121,8 +121,20 @@ def show_tips(request, problem_slug):
 
     tips = problem.tip_set.all()
 
+    form = TipForm()
+    if request.method == "POST":
+        form = TipForm(request.POST)
+        if form.is_valid():
+            tip = form.save(commit=False)
+            tip.author = request.user.userprofile
+            tip.problem = problem
+            tip.time = timezone.now()
+            tip.save()
+            form = TipForm()
+
     return render(request, 'progress/show_tips.html', context={'tips': tips,
-                                                               'problem': problem})
+                                                               'problem': problem,
+                                                               'form': form})
 
 
 def solved_by(request, problem_slug, page=1):

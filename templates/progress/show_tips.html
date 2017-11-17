@@ -16,4 +16,14 @@
     <br>
     <br>
   {% endfor %}
+  {% if user.is_authenticated %}
+    <h2>Add a tip</h2>
+    <form method="POST" action="{% url 'show_tips' problem.slug %}">
+      {% csrf_token %}
+      {{form.content}}
+      <input type="submit" name="submit" value="submit">
+    </form>
+  {% else %}
+    <p><a href="{% url 'auth_login'%}?next={{request.path}}">Login</a> or <a href="{% url 'registration_register' %}">register</a> to add a tip</p>
+  {% endif %}
 {% endblock section_block %}
