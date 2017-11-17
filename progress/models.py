@@ -157,6 +157,14 @@ class Variable(models.Model):
         return self.name + ': ' + self.value
 
 
+class Tip(models.Model):
+    problem = models.ForeignKey(Problem)
+    author = models.ForeignKey(UserProfile)
+    time = models.DateTimeField(blank=True, null=True)
+
+    content = models.CharField(max_length=800)
+
+
 def save_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)

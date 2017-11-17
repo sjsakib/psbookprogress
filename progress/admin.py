@@ -1,5 +1,6 @@
 from django.contrib import admin
-from progress.models import Part, Chapter, Judge, Problem, UserProfile, ProblemAlias
+from django import forms
+from progress.models import Part, Chapter, Judge, Problem, UserProfile, ProblemAlias, Tip
 
 
 @admin.register(Problem)
@@ -18,6 +19,16 @@ class UserProfileAdmin(admin.ModelAdmin):
         return obj.user.email
 
     get_email.short_description = 'email'
+
+
+class TipAdminForm(forms.ModelForm):
+    content = forms.CharField(widget=forms.Textarea)
+
+
+@admin.register(Tip)
+class TipAdmin(admin.ModelAdmin):
+    list_display = ('problem', 'author', 'time',)
+    form = TipAdminForm
 
 
 admin.site.register(Part)
