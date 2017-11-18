@@ -5,6 +5,7 @@
       <th>Name</th>
       <th>Points</th>
       <th>Progress</th>
+      <th>Tips</th>
       <th>Last Update</th>
     </tr>
   </thead>
@@ -14,8 +15,9 @@
         <td>{{forloop.counter}}</td>
         <td><a href="{% url 'profile' usr.user.username %}">{{usr.get_name}}</a></td>
         <td>{{usr.points}}</td>
-        <td><progress value="{{usr.get_progress}}" max="100">{{usr.get_progress}} %</progress></td>
-        <td>{{usr.last_updated}}</td>
+        <td title="{{usr.get_progress}}"><progress value="{{usr.get_progress}}" max="100">{{usr.get_progress}} %</progress></td>
+        <td>{{usr.get_tips}}</td>
+        <td>{{usr.last_updated|date:"d N Y"}}</td>
       </tr>
     {% endfor %}
   </tbody>
