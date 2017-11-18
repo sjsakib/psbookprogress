@@ -94,6 +94,9 @@ class UserProfile(models.Model):
                 return i+1
         return -1
 
+    def get_tips(self):
+        return self.tip_set.count()
+
     def save(self, *args, **kwargs):
         if self.picture:
             if self.pk:
