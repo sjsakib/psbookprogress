@@ -45,6 +45,9 @@ p.info {
 p.attention {
     color: #ec4ac7;
 }
+span.error {
+    color: #ff3c46;
+}
 
 ul.menu {
     list-style: none;

@@ -22,6 +22,31 @@
     Points: {{profile.points}}<br/>
     Progress: {{profile.get_progress}} %<br/>
   </p>
+  <p>
+    {% if profile.uva_id %}
+      <a href="https://uhunt.onlinejudge.org/id/{{profile.uva_id}}" target="_blank">uHunt</a>,
+    {% else %}
+      <span class="error">UVa ID not provided,</span>
+    {% endif %}
+
+    {% if profile.timus_id %}
+      <a href="http://acm.timus.ru/author.aspx?id={{profile.timus_id}}" target="_blank">Timus</a>,
+    {% else %}
+      <span class="error">Timus ID not provided,</span>
+    {% endif %}
+
+    {% if profile.loj_id %}
+      <a href="http://lightoj.com/volume_userstat.php?user_id={{profile.loj_id}}" target="_blank">LightOJ</a>,
+    {% else %}
+      <span class="error">LightOJ ID not provided,</span>
+    {% endif %}
+
+    {% if profile.cf_id %}
+      <a href="http://codeforces.com/profile/{{profile.cf_id}}" target="_blank">Codeforces</a>
+    {% else %}
+      <span class="error">Codeforces ID not provided</span>
+    {% endif %}
+  </p>
 {% endblock header_block %}
 
 {% block section_block %}
