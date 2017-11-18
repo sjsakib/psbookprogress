@@ -14,8 +14,10 @@ from math import ceil
 def index(request):
     top_users = UserProfile.objects.all().order_by('-points', 'last_updated')[:20]
     recently_active = UserProfile.objects.all().order_by('-last_updated')[:20]
+    recent_tips = Tip.objects.all().order_by('-time')[:10]
     return render(request, 'progress/index.html', context={'top_users': top_users,
-                                                           'recently_active': recently_active})
+                                                           'recently_active': recently_active,
+                                                           'recent_tips': recent_tips})
 
 
 def profile(request, username=None):

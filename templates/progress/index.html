@@ -12,9 +12,21 @@
   {% if not user.is_authenticated %}
     <p> <a href="{% url 'registration_register' %}">Register</a> or <a href="{% url 'auth_login' %}">login</a> to get started now.</p>
   {% endif %}
+  
   <h2>Top 20</h2>
   <p><a href="{% url 'ranklist' 1 %}">Full Ranklist</a></p>
   {% show_users top_users user %}
+
+  <h2>Recent Tips</h2>
+  <table>
+    {% for tip in recent_tips %}
+      <tr>
+        <td><a href="{% url 'show_tips' tip.problem.slug %}">{{tip.author.get_name}} on {{tip.problem}}</a></td>
+        <td>{{tip.time}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  
   <h2> Recently Active</h2>
   {% show_users recently_active user %}
 {% endblock section_block %}
